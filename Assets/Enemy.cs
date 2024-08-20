@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
     }
 
-    // Start is called before the first frame update
+   
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         if(transform.position.y < screenBounds.y - 30){
