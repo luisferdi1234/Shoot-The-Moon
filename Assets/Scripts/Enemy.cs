@@ -9,10 +9,6 @@ public class Enemy : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 screenBounds;
 
-    private void OnCollisionEnter2D(Collision2D other) {
-        Destroy(gameObject);
-    }
-
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +20,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.y < screenBounds.y - 30){
+        if(transform.position.y < screenBounds.y - 20){
             Destroy(this.gameObject);
         }
         
