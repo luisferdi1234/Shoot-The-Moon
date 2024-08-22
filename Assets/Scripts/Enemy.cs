@@ -5,24 +5,36 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float speed = 5.0f;
+    //Variables
+    [SerializeField]
+    private float speed = 5.0f;
+
+    [SerializeField]
+    private int health = 2;
+
     private Rigidbody2D rb;
-    private Vector2 screenBounds;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        //Makes enemy move downwards
         rb = this.GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(0, -speed);
-        screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+        rb.velocity = Vector2.down * speed;
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if(transform.position.y < screenBounds.y - 20){
-            Destroy(this.gameObject);
+        //Checks collision with bullets
+        if (collision.gameObject.tag == "Bullet")
+        {
+            health--;
+            Destroy(collision.gameObject);
+
+            if (health <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
-        
     }
 }
