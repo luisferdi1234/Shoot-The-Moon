@@ -27,8 +27,9 @@ public class Enemy : MonoBehaviour
     {
         //Checks collision with bullets
         if (collision.gameObject.tag == "Bullet")
-        {
+        {  // increase coin score on kill
             CoinScore.coinsValue += 10;
+            //
             health--;
             Destroy(collision.gameObject);
 
