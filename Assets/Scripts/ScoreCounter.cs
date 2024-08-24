@@ -1,20 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using Unity.Mathematics;
+using System;
 
 public class ScoreCounter : MonoBehaviour
-{ 
-    public string scoreValueText;
-    //sets start time to 0
-    public float scoreValue = 0.0f;
-    public float pointIncreasedPerSecond;
-
-    void FixedUpdate()
-    { //updates text on screen
-        scoreValueText = ((int)scoreValue).ToString();
-        //increase screen time per second
-        scoreValue = pointIncreasedPerSecond * Time.fixedDeltaTime;
+{
+    public float timeRemaining = 0;
+    public bool timeIsRunning = true;
+    public TMP_Text timeText;
+    // Start is called before the first frame update
+    void Start()
+    {
+        timeIsRunning = true;
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        if(timeIsRunning)
+        {
+            if (timeRemaining >= 0)
+            {
+                timeRemaining += Time.deltaTime;
+                DisplayTime(timeRemaining);
+            }
+        }
+    }
+    void DisplayTime (float timeToDisplay)
+    {
+        timeToDisplay +=1;
+        float minutes = Mathf.FloorToInt (timeToDisplay / 60);
+        float seconds = Mathf.FloorToInt (timeToDisplay % 60);
+        timeText.text = string.Format ("{0:00} : {1:00}", minutes, seconds);
+    }
 }
