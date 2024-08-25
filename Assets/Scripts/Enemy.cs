@@ -12,6 +12,9 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private int health = 2;
 
+    [SerializeField]
+    private int goldFromDeath = 1;
+
     private Rigidbody2D rb;
 
 
@@ -35,6 +38,7 @@ public class Enemy : MonoBehaviour
 
             if (health <= 0)
             {
+                ScoreManager.Instance.AddGold(goldFromDeath);
                 Destroy(gameObject);
             }
         }
