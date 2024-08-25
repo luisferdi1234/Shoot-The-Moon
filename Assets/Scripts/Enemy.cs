@@ -30,14 +30,14 @@ public class Enemy : MonoBehaviour
     {
         //Checks collision with bullets
         if (collision.gameObject.tag == "Bullet")
-        {  // increase coin score on kill
-            CoinScore.coinsValue += 10;
-            //
+        {
+            //Reduces enemy health
             health--;
             Destroy(collision.gameObject);
 
             if (health <= 0)
             {
+                //Awards coins on enemy death
                 ScoreManager.Instance.AddGold(goldFromDeath);
                 Destroy(gameObject);
             }
