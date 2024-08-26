@@ -51,6 +51,7 @@ public class DistanceCounter : MonoBehaviour
     {
         fuelAmount -= .1f;
         fuelBar.fillAmount = fuelAmount / maxFuelAmount;
+        CheckFuelAmount();
     }
 
     /// <summary>
