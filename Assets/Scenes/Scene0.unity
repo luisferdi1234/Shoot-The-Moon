@@ -585,7 +585,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceText: {fileID: 1068545536}
   fuelBar: {fileID: 1369537059}
-  maxFuelAmount: 50
+  maxFuelAmount: 10
 --- !u!1 &1068545535
 GameObject:
   m_ObjectHideFlags: 0
