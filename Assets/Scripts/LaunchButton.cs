@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,4 +11,5 @@ public class LaunchButton : MonoBehaviour
         //loads the play scene using the function
         SceneManager.LoadScene("Scene0");
     }
+
 }
