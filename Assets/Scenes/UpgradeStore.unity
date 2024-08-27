@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 41005758}
   - component: {fileID: 41005757}
   m_Layer: 5
-  m_Name: cost
+  m_Name: Weapon Cost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -505,7 +505,7 @@ GameObject:
   - component: {fileID: 351600428}
   - component: {fileID: 351600427}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Coins Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1034,7 +1034,6 @@ GameObject:
   - component: {fileID: 609535835}
   - component: {fileID: 609535834}
   - component: {fileID: 609535833}
-  - component: {fileID: 609535836}
   m_Layer: 5
   m_Name: FuelUpgrade
   m_TagString: Untagged
@@ -1144,18 +1143,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 609535831}
   m_CullTransparentMesh: 1
---- !u!114 &609535836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 609535831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7575b83f22d34a243a216154b3d72633, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &631686591
 GameObject:
   m_ObjectHideFlags: 0
@@ -1708,7 +1695,7 @@ GameObject:
   - component: {fileID: 843568389}
   - component: {fileID: 843568388}
   m_Layer: 5
-  m_Name: Button
+  m_Name: DefenseUpgrade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2362,7 +2349,7 @@ GameObject:
   - component: {fileID: 1166368606}
   - component: {fileID: 1166368605}
   m_Layer: 5
-  m_Name: cost
+  m_Name: Launch Pad Cost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2838,7 +2825,7 @@ GameObject:
   - component: {fileID: 1579518591}
   - component: {fileID: 1579518590}
   m_Layer: 5
-  m_Name: Cost
+  m_Name: Speed Cost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2994,14 +2981,13 @@ RectTransform:
   m_Children:
   - {fileID: 631686592}
   - {fileID: 609535832}
+  - {fileID: 2017250188}
   - {fileID: 827910584}
   - {fileID: 550383525}
-  - {fileID: 970913283}
-  - {fileID: 843568387}
-  - {fileID: 1101788631}
-  - {fileID: 2017250188}
   - {fileID: 1579518589}
+  - {fileID: 970913283}
   - {fileID: 1166368604}
+  - {fileID: 843568387}
   - {fileID: 2041143207}
   - {fileID: 41005756}
   - {fileID: 351600426}
@@ -3013,6 +2999,7 @@ RectTransform:
   - {fileID: 652388479}
   - {fileID: 1748472201}
   - {fileID: 1065974909}
+  - {fileID: 1101788631}
   m_Father: {fileID: 238985295}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3614,7 +3601,7 @@ GameObject:
   - component: {fileID: 2017250190}
   - component: {fileID: 2017250189}
   m_Layer: 5
-  m_Name: Cost
+  m_Name: Fuel Cost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3750,7 +3737,7 @@ GameObject:
   - component: {fileID: 2041143209}
   - component: {fileID: 2041143208}
   m_Layer: 5
-  m_Name: cost
+  m_Name: Defense Cost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
