@@ -73,7 +73,7 @@ public class DistanceCounter : MonoBehaviour
     {
         if (fuelAmount <= 0)
         {
-            SceneManager.LoadScene("Scene0");
+            SceneManager.LoadScene("UpgradeStore");
         }
     }
 }
