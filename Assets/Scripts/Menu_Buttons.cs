@@ -11,6 +11,6 @@ public class Menu_Buttons : MonoBehaviour
     public void LoadScene()
     {
         //loads the scene1 using the method called LoadScene
-        SceneManager.LoadScene("Scene0");
+        SceneManager.LoadScene("UpgradeStore");
     }
 }
