@@ -17,7 +17,7 @@ public class DistanceCounter : MonoBehaviour
     [SerializeField]
     private Image fuelBar;
     [SerializeField]
-    public float maxFuelAmount = 50f;
+    private float maxFuelAmount = 50f;
     private float fuelAmount = 50f;
 
     private void Start()
