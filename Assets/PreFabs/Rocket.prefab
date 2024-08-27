@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3499514842838177056}
   - component: {fileID: 7124498096794688892}
-  - component: {fileID: 2374242439633353536}
   - component: {fileID: 3928315339717405156}
   - component: {fileID: 8155286926393526820}
   - component: {fileID: 8781578047446319221}
@@ -91,20 +90,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2374242439633353536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3868690479332875185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f423c7aff26ff7418ad131f5193082f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  bullet: {fileID: 3680231748080708415, guid: b347adf4e4280a943a63b52e6bb98292, type: 3}
 --- !u!114 &3928315339717405156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,7 +102,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691d91821ac79d148ac741133314836a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 6
+  moveSpeed: 5
+  bullet: {fileID: 3680231748080708415, guid: b347adf4e4280a943a63b52e6bb98292, type: 3}
 --- !u!114 &8155286926393526820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,7 +147,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}

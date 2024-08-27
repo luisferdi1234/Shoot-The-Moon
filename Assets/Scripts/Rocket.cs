@@ -4,10 +4,12 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
-public class PlayerControlsScript : MonoBehaviour
+public class Rocket : MonoBehaviour
 {
+    //Variables
     Rigidbody2D rb;
     private float minX, maxX, minY, maxY;
+    private float fuelLossFromHit = 5f;
 
     //Editable Variables
     [SerializeField]
@@ -59,6 +61,9 @@ public class PlayerControlsScript : MonoBehaviour
         maxX = screenBounds.x;
         minY = -screenBounds.y;
         maxY = screenBounds.y;
+
+        //When shop is fully implemented add code below this to set how much fuel the player loses from hits
+        //fuelLossFromHit = PlayerPrefs.
     }
 
     private void Update()
@@ -94,5 +99,15 @@ public class PlayerControlsScript : MonoBehaviour
     private void Fire(InputAction.CallbackContext context)
     {
         Instantiate(bullet, transform.position, transform.rotation);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //Checks collision with enemies and lowers health
+        if (collision.gameObject.tag == "Enemy")
+        {
+            DistanceCounter.Instance.DecreaseFuel(fuelLossFromHit);
+            Destroy(collision.gameObject);
+        }
     }
 }

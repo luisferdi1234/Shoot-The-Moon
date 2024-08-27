@@ -7,6 +7,16 @@ using UnityEngine.UI;
 
 public class DistanceCounter : MonoBehaviour
 {
+
+    //Singleton pattern to make DistanceCounter accessible from anywhere
+    public static DistanceCounter Instance { get; private set; }
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+    }
     //Distance Variables
     private float timer;
     private float distance = 0;
@@ -18,12 +28,11 @@ public class DistanceCounter : MonoBehaviour
     private Image fuelBar;
     [SerializeField]
     private float maxFuelAmount = 50f;
+
     private float fuelAmount = 50f;
 
-    private void Start()
-    {
-        fuelAmount = maxFuelAmount;
-    }
+    public float MaxFuelAmount { get => maxFuelAmount; set => maxFuelAmount = value; }
+    public float FuelAmount { get => fuelAmount; set => fuelAmount = value; }
 
     void Update()
     { 
@@ -34,8 +43,8 @@ public class DistanceCounter : MonoBehaviour
         if (timer >= .1f)
         {
             timer = 0;
-            distance += .1f;
-            DecreaseFuel();
+            AddDistance(.1f);
+            DecreaseFuel(.1f);
             //Sets it to the second decimal place
             distance = (float)Mathf.Round(distance * 100f) / 100f;
         }
@@ -47,9 +56,9 @@ public class DistanceCounter : MonoBehaviour
     /// <summary>
     /// Lowers Fuel Bar on UI
     /// </summary>
-    void DecreaseFuel()
+    public void DecreaseFuel(float amount)
     {
-        fuelAmount -= .1f;
+        fuelAmount -= amount;
         fuelBar.fillAmount = fuelAmount / maxFuelAmount;
         CheckFuelAmount();
     }
@@ -67,7 +76,7 @@ public class DistanceCounter : MonoBehaviour
     }
 
     /// <summary>
-    /// Restarts the scene once player is out of fuel. We can make this do something else eventually.
+    /// Goes to store page once the player runs out of fuel
     /// </summary>
     void CheckFuelAmount()
     {
@@ -75,5 +84,10 @@ public class DistanceCounter : MonoBehaviour
         {
             SceneManager.LoadScene("UpgradeStore");
         }
+    }
+
+    public void AddDistance(float kilometers)
+    {
+        distance += kilometers;
     }
 }
