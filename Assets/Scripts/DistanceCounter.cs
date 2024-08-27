@@ -82,10 +82,15 @@ public class DistanceCounter : MonoBehaviour
     {
         if (fuelAmount <= 0)
         {
+            ScoreManager.Instance.SaveGold();
             SceneManager.LoadScene("UpgradeStore");
         }
     }
 
+    /// <summary>
+    /// Adds a given distance to the distance counter.
+    /// </summary>
+    /// <param name="kilometers"></param>
     public void AddDistance(float kilometers)
     {
         distance += kilometers;

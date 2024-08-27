@@ -62,6 +62,16 @@ public class ScoreManager : MonoBehaviour
     }
 
     /// <summary>
+    /// Saves the Gold from the player's current run
+    /// </summary>
+    public void SaveGold()
+    {
+        int totalGold = PlayerPrefs.GetInt("Gold");
+        totalGold += gold;
+        PlayerPrefs.SetInt("Gold", totalGold);
+    }
+
+    /// <summary>
     /// Updates the text UI to display the updated gold the player has
     /// </summary>
     /// <param name="timeToDisplay"></param>
