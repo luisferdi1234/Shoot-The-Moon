@@ -9,9 +9,11 @@ using System.Runtime.InteropServices;
 
 public class PlayerCoins : MonoBehaviour
 {
-
+    //Variables
     private int gold = 0;
-    [SerializeField] TMP_Text goldText;
+
+    [SerializeField] 
+    private TMP_Text goldText;
 
     
     void Start()
@@ -19,7 +21,6 @@ public class PlayerCoins : MonoBehaviour
         //ScoreManager.Instance.SaveGold();
         gold = PlayerPrefs.GetInt("Gold");
         goldText.text = $"Gold: ${gold}";
-
     }
 
 
