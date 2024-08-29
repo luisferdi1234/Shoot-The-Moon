@@ -13,4 +13,18 @@ public class Menu_Buttons : MonoBehaviour
         //loads the scene1 using the method called LoadScene
         SceneManager.LoadScene("UpgradeStore");
     }
+
+    public void LoadOptions()
+    {
+        //loads the scene1 using the method called LoadScene
+        SceneManager.LoadScene("Options");
+    }
+
+    public void LoadCredits()
+    {
+ 
+        SceneManager.LoadScene("Credits");
+    }
+
+
 }

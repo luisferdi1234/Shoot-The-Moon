@@ -20,5 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/OutOfFuel.unity
     guid: fe94f6aba86121246b17c3dd09e41518
+  - enabled: 1
+    path: Assets/Scenes/Options.unity
+    guid: cf7dae931076ae84b84eed92ef0070e9
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
