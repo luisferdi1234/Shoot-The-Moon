@@ -29,9 +29,9 @@ public class DistanceCounter : MonoBehaviour
     [SerializeField]
     private Image fuelBar;
     [SerializeField]
-    private float maxFuelAmount = 50f;
+    private float maxFuelAmount = 10f;
 
-    private float fuelAmount = 50f;
+    private float fuelAmount = 10f;
 
     public float MaxFuelAmount { get => maxFuelAmount; set => maxFuelAmount = value; }
     public float FuelAmount { get => fuelAmount; set => fuelAmount = value; }
@@ -89,9 +89,12 @@ public class DistanceCounter : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Gives a warning when fuel is below 20%
+    /// </summary>
     void FuelWarning()
     {
-        if(fuelAmount <= 20)
+        if(fuelAmount <= maxFuelAmount * .2f)
         {
           
 

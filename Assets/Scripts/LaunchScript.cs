@@ -115,29 +115,39 @@ public class LaunchScript : MonoBehaviour
         {
             distanceCounter.MaxFuelAmount *= minimumFuelPercentage;
             distanceCounter.FuelAmount = distanceCounter.MaxFuelAmount;
+
+            //launch distance
+            distanceCounter.AddDistance(distanceFromPerfectLaunch * launchPower);
         }
         //Set fuel to 75%
         else if (launchPower <= .66f)
         {
             distanceCounter.MaxFuelAmount *= minimumFuelPercentage + .25f; 
             distanceCounter.FuelAmount = distanceCounter.MaxFuelAmount;
+
+            //launch distance
+            distanceCounter.AddDistance(distanceFromPerfectLaunch * launchPower);
         }
         //Set fuel 90%
         else if (launchPower <= .9f)
         {
             distanceCounter.MaxFuelAmount *= minimumFuelPercentage + .4f; 
             distanceCounter.FuelAmount = distanceCounter.MaxFuelAmount;
+
+            //launch distance
+            distanceCounter.AddDistance(distanceFromPerfectLaunch * launchPower);
         }
         //Set fuel to 100%
         else if (launchPower >= .9f)
         {
             distanceCounter.FuelAmount = distanceCounter.MaxFuelAmount;
+
             //Give player gold for a good launch
             ScoreManager.Instance.AddGold(goldFromPerfectLaunch);
-        }
 
-        //Makes player gain more distance from a good launch. Scales off of the maxFuelAmount and launch power
-        distanceCounter.AddDistance(distanceCounter.MaxFuelAmount);
+            //launch distance
+            distanceCounter.AddDistance(distanceFromPerfectLaunch);
+        }
     }
 
     /// <summary>

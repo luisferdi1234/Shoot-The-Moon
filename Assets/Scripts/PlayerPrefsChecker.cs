@@ -16,6 +16,7 @@ public class PlayerPrefsChecker : MonoBehaviour
     private void Awake()
     {
         CheckFuel();
+        CheckLaunch();
         CheckSpeed();
         CheckWeapons();
         CheckDefense();
