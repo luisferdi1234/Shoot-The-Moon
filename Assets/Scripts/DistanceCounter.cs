@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem.XR.Haptics;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DistanceCounter : MonoBehaviour
 {
+
+
+
 
     //Singleton pattern to make DistanceCounter accessible from anywhere
     public static DistanceCounter Instance { get; private set; }
@@ -18,6 +22,8 @@ public class DistanceCounter : MonoBehaviour
         }
     }
     //Distance Variables
+
+    
     private float timer;
     private float distance = 0;
     [SerializeField] 
@@ -83,7 +89,16 @@ public class DistanceCounter : MonoBehaviour
         if (fuelAmount <= 0)
         {
             ScoreManager.Instance.SaveGold();
-            SceneManager.LoadScene("UpgradeStore");
+            SceneManager.LoadScene("OutOfFuel");
+        }
+    }
+
+    void FuelWarning()
+    {
+        if(fuelAmount <= 20)
+        {
+          
+
         }
     }
 
@@ -95,4 +110,6 @@ public class DistanceCounter : MonoBehaviour
     {
         distance += kilometers;
     }
+
+
 }
