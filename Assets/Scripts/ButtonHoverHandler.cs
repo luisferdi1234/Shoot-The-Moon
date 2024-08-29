@@ -12,6 +12,8 @@ public class ButtonHoverHandler : MonoBehaviour, IPointerEnterHandler, IPointerE
     TextMeshProUGUI descriptionText;
     [SerializeField]
     TextMeshProUGUI costText;
+    [SerializeField]
+    TextMeshProUGUI goldText;
 
     [SerializeField] 
     string upgradeDescription;
@@ -36,6 +38,34 @@ public class ButtonHoverHandler : MonoBehaviour, IPointerEnterHandler, IPointerE
             descriptionText.text = ""; // Clear the description.
             costText.text = "";
         }
+    }
+
+    public void RefreshText()
+    {
+        //Refreshes Current Hovered Over Cost
+        if (!PlayerPrefs.HasKey(upgradeName))
+        {
+            costText.text = $"Cost: $20";
+        }
+        else
+        {
+            if (PlayerPrefs.GetInt(upgradeName) == 0)
+            {
+                costText.text = $"Cost: $50";
+            }
+            else if (PlayerPrefs.GetInt(upgradeName) == 1)
+            {
+                costText.text = $"Cost: $200";
+            }
+            else if (PlayerPrefs.GetInt(upgradeName) == 2)
+            {
+                costText.text = $"Cost: $500";
+            }
+        }
+
+        //Refreshes Player Gold
+        int gold = PlayerPrefs.GetInt("Gold");
+        goldText.text = $"Gold: ${gold}";
     }
 
     /// <summary>

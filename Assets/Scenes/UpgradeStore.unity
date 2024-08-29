@@ -440,7 +440,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 559207419}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1101788632}
+        m_TargetAssemblyTypeName: StoreButtonManager, Assembly-CSharp
+        m_MethodName: UpgradeButton
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Speed
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 559207421}
+        m_TargetAssemblyTypeName: ButtonHoverHandler, Assembly-CSharp
+        m_MethodName: RefreshText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &559207419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,6 +517,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descriptionText: {fileID: 1741600007}
   costText: {fileID: 1414070015}
+  goldText: {fileID: 1559957278}
   upgradeDescription: Increase rocket's move speed
   upgradeName: Speed
 --- !u!1 &561113340
@@ -714,7 +739,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 609535834}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1101788632}
+        m_TargetAssemblyTypeName: StoreButtonManager, Assembly-CSharp
+        m_MethodName: UpgradeButton
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Fuel
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 609535836}
+        m_TargetAssemblyTypeName: ButtonHoverHandler, Assembly-CSharp
+        m_MethodName: RefreshText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &609535834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -767,6 +816,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descriptionText: {fileID: 1741600007}
   costText: {fileID: 1414070015}
+  goldText: {fileID: 1559957278}
   upgradeDescription: Increases the amount of fuel you have in your tank
   upgradeName: Fuel
 --- !u!1 &631686591
@@ -853,8 +903,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1101788632}
-        m_TargetAssemblyTypeName: LaunchButton, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_TargetAssemblyTypeName: StoreButtonManager, Assembly-CSharp
+        m_MethodName: LaunchButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -997,7 +1047,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1025295142}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1101788632}
+        m_TargetAssemblyTypeName: StoreButtonManager, Assembly-CSharp
+        m_MethodName: UpgradeButton
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Launch
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1025295144}
+        m_TargetAssemblyTypeName: ButtonHoverHandler, Assembly-CSharp
+        m_MethodName: RefreshText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1025295142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1050,7 +1124,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descriptionText: {fileID: 1741600007}
   costText: {fileID: 1414070015}
-  upgradeDescription: Increases the distance you get from the initial launch
+  goldText: {fileID: 1559957278}
+  upgradeDescription: Increases the distance you get from the initial launch and
+    increase gold you get from perfect launch
   upgradeName: Launch
 --- !u!1 &1045192884
 GameObject:
@@ -1156,7 +1232,7 @@ GameObject:
   - component: {fileID: 1101788631}
   - component: {fileID: 1101788632}
   m_Layer: 5
-  m_Name: UI manager
+  m_Name: Store Button Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1344,7 +1420,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1410475562}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1101788632}
+        m_TargetAssemblyTypeName: StoreButtonManager, Assembly-CSharp
+        m_MethodName: UpgradeButton
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Defense
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1410475564}
+        m_TargetAssemblyTypeName: ButtonHoverHandler, Assembly-CSharp
+        m_MethodName: RefreshText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1410475562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1397,6 +1497,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descriptionText: {fileID: 1741600007}
   costText: {fileID: 1414070015}
+  goldText: {fileID: 1559957278}
   upgradeDescription: Lose less fuel from enemy hits
   upgradeName: Defense
 --- !u!1 &1414070012
@@ -2289,7 +2390,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1762825731}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1101788632}
+        m_TargetAssemblyTypeName: StoreButtonManager, Assembly-CSharp
+        m_MethodName: UpgradeButton
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Weapon
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1762825733}
+        m_TargetAssemblyTypeName: ButtonHoverHandler, Assembly-CSharp
+        m_MethodName: RefreshText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1762825731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2342,6 +2467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descriptionText: {fileID: 1741600007}
   costText: {fileID: 1414070015}
+  goldText: {fileID: 1559957278}
   upgradeDescription: Increases rocket firing speed
   upgradeName: Weapon
 --- !u!1 &1966503258

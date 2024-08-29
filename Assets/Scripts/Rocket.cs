@@ -9,7 +9,9 @@ public class Rocket : MonoBehaviour
     //Variables
     Rigidbody2D rb;
     private float minX, maxX, minY, maxY;
-    private float fuelLossFromHit = 5f;
+    private float fuelLossFromHit = .75f;
+    private float shotCooldown = 0;
+    private float maxShotCooldown = 1f;
 
     //Editable Variables
     [SerializeField]
@@ -23,6 +25,11 @@ public class Rocket : MonoBehaviour
     private InputAction move;
     private InputAction fire;
     Vector2 moveDirection = Vector2.zero;
+
+    //Accessors
+    public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
+    public float MaxShotCooldown { get => maxShotCooldown; set => maxShotCooldown = value; }
+    public float FuelLossFromHit { get => fuelLossFromHit; set => fuelLossFromHit = value; }
 
     private void Awake()
     {
@@ -70,6 +77,7 @@ public class Rocket : MonoBehaviour
     {
         //Reads input from the input system
         moveDirection = move.ReadValue<Vector2>();
+        shotCooldown += Time.deltaTime;
     }
 
     void FixedUpdate()
@@ -98,7 +106,11 @@ public class Rocket : MonoBehaviour
     /// <param name="context"></param>
     private void Fire(InputAction.CallbackContext context)
     {
-        Instantiate(bullet, transform.position, transform.rotation);
+        if (shotCooldown >= maxShotCooldown)
+        {
+            shotCooldown = 0;
+            Instantiate(bullet, transform.position, transform.rotation);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -106,7 +118,8 @@ public class Rocket : MonoBehaviour
         //Checks collision with enemies and lowers health
         if (collision.gameObject.tag == "Enemy")
         {
-            DistanceCounter.Instance.DecreaseFuel(fuelLossFromHit);
+            float fuelLoss = DistanceCounter.Instance.MaxFuelAmount * fuelLossFromHit;
+            DistanceCounter.Instance.DecreaseFuel(fuelLoss);
             Destroy(collision.gameObject);
         }
     }

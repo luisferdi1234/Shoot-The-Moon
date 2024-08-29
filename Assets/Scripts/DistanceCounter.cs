@@ -8,10 +8,6 @@ using UnityEngine.UI;
 
 public class DistanceCounter : MonoBehaviour
 {
-
-
-
-
     //Singleton pattern to make DistanceCounter accessible from anywhere
     public static DistanceCounter Instance { get; private set; }
     private void Awake()

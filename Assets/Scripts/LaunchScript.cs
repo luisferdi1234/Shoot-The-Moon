@@ -25,8 +25,9 @@ public class LaunchScript : MonoBehaviour
     [SerializeField]
     private float minimumFuelPercentage = .5f;
 
-    [SerializeField]
     private int goldFromPerfectLaunch = 30;
+
+    private float distanceFromPerfectLaunch = 10f;
 
     DistanceCounter distanceCounter;
 
@@ -37,6 +38,9 @@ public class LaunchScript : MonoBehaviour
     //Input System Variables
     private PlayerControls playerControls;
     private InputAction fire;
+
+    public int GoldFromPerfectLaunch { get => goldFromPerfectLaunch; set => goldFromPerfectLaunch = value; }
+    public float DistanceFromPerfectLaunch { get => distanceFromPerfectLaunch; set => distanceFromPerfectLaunch = value; }
 
     private void Awake()
     {
@@ -132,7 +136,7 @@ public class LaunchScript : MonoBehaviour
             ScoreManager.Instance.AddGold(goldFromPerfectLaunch);
         }
 
-        //Makes player gain more distance from a good launch. Scales off of the maxFuelAmount
+        //Makes player gain more distance from a good launch. Scales off of the maxFuelAmount and launch power
         distanceCounter.AddDistance(distanceCounter.MaxFuelAmount);
     }
 
