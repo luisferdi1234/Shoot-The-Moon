@@ -14,5 +14,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/UpgradeStore.unity
     guid: 6c38041baab0cc245b93854661149d4f
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 137cbbedee3120d458032294fd7c9088
+  - enabled: 1
+    path: Assets/Scenes/OutOfFuel.unity
+    guid: fe94f6aba86121246b17c3dd09e41518
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
