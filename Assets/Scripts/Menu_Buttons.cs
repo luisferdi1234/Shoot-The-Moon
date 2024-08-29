@@ -18,6 +18,9 @@ public class Menu_Buttons : MonoBehaviour
         StartCoroutine(LoadSceneAfterSound("UpgradeStore"));
     }
 
+    /// <summary>
+    /// Handles the Options Button Being Pressed
+    /// </summary>
     public void LoadOptions()
     {
         GetComponent<AudioSource>().PlayOneShot(buttonPress);
@@ -25,11 +28,22 @@ public class Menu_Buttons : MonoBehaviour
         StartCoroutine(LoadSceneAfterSound("Options"));
     }
 
+    /// <summary>
+    /// Handles the Credits Button Being Pressed
+    /// </summary>
     public void LoadCredits()
     {
         GetComponent<AudioSource>().PlayOneShot(buttonPress);
 
         StartCoroutine(LoadSceneAfterSound("Credits"));
+    }
+
+    /// <summary>
+    /// Handles the Quit Button Being Pressed
+    /// </summary>
+    public void ExitButton()
+    {
+        Application.Quit();
     }
 
     IEnumerator LoadSceneAfterSound(string sceneName)
