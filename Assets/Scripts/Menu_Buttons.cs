@@ -14,24 +14,27 @@ public class Menu_Buttons : MonoBehaviour
     public void LoadScene()
     {
         GetComponent<AudioSource>().PlayOneShot(buttonPress);
-        //loads the scene1 using the method called LoadScene
-        SceneManager.LoadScene("UpgradeStore");
+
+        StartCoroutine(LoadSceneAfterSound("UpgradeStore"));
     }
 
     public void LoadOptions()
     {
         GetComponent<AudioSource>().PlayOneShot(buttonPress);
-        //loads the Options Scene
-        SceneManager.LoadScene("Options");
+
+        StartCoroutine(LoadSceneAfterSound("Options"));
     }
 
     public void LoadCredits()
     {
         GetComponent<AudioSource>().PlayOneShot(buttonPress);
 
-        //Loads the Credits Scene
-        SceneManager.LoadScene("Credits");
+        StartCoroutine(LoadSceneAfterSound("Credits"));
     }
 
-
+    IEnumerator LoadSceneAfterSound(string sceneName)
+    {
+        yield return new WaitForSeconds(buttonPress.length); // Wait for the sound to finish
+        SceneManager.LoadScene(sceneName);
+    }
 }

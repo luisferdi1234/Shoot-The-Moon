@@ -98,6 +98,9 @@ public class LaunchScript : MonoBehaviour
         //Allows player to move rocket now
         rocket.GetComponent<Rocket>().enabled = true;
 
+        //Plays rocket whir sound
+        rocket.GetComponent<AudioSource>().Play();
+
         //Turns off Launch UI
         gameObject.SetActive(false);
     }

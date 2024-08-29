@@ -19,6 +19,10 @@ public class Rocket : MonoBehaviour
     float moveSpeed = 5f;
     [SerializeField]
     private GameObject bullet;
+    [SerializeField]
+    private AudioSource gameSoundEffects;
+    [SerializeField]
+    private AudioClip bulletSound;
 
     //Input System Variables
     private PlayerControls playerControls;
@@ -109,6 +113,7 @@ public class Rocket : MonoBehaviour
         if (shotCooldown >= maxShotCooldown)
         {
             shotCooldown = 0;
+            gameSoundEffects.PlayOneShot(bulletSound);
             Instantiate(bullet, transform.position, transform.rotation);
         }
     }

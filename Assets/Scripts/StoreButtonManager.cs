@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static UnityEditor.Timeline.TimelinePlaybackControls;
 
 public class StoreButtonManager : MonoBehaviour
 {
@@ -20,11 +19,13 @@ public class StoreButtonManager : MonoBehaviour
     {
         int currentGold = PlayerPrefs.GetInt("Gold");
         int upgradeCost = CheckPrice(upgradeName);
+
         if (currentGold >= upgradeCost)
         {
             //Lowers Player's Gold
             currentGold -= upgradeCost;
             PlayerPrefs.SetInt("Gold", currentGold);
+            AudioManager.Instance.PlayHealthUpSound();
 
             //If first time upgrading then set value to 0
             if (!PlayerPrefs.HasKey(upgradeName))
