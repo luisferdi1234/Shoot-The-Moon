@@ -530,7 +530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameUI: {fileID: 1013370293}
-  rocket: {fileID: 1787388602}
+  rocket: {fileID: 3856644392152879264}
   launchBar: {fileID: 346687678}
   maxPower: {fileID: 688432658}
   timeToFill: 0.8
@@ -817,7 +817,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameUI: {fileID: 1013370293}
   LaunchUI: {fileID: 453828276}
-  Rocket: {fileID: 0}
+  Rocket: {fileID: 3856644392152879264}
 --- !u!4 &634317174
 Transform:
   m_ObjectHideFlags: 0
@@ -1095,6 +1095,7 @@ GameObject:
   - component: {fileID: 1013370298}
   - component: {fileID: 1013370299}
   - component: {fileID: 1013370300}
+  - component: {fileID: 1013370301}
   m_Layer: 5
   m_Name: GameUI
   m_TagString: Untagged
@@ -1235,6 +1236,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 7554973770875957084, guid: c26e3e14832ad5d4ea6f06c6631f10a3, type: 3}
   respawnTime: 1
+--- !u!114 &1013370301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013370293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dee2c6c7a0623f408388007d57f2304, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  airPlanePrefab: {fileID: 1350063215531078893, guid: 613950902196f8f418cc85e19a1c9b35, type: 3}
+  respawnTime: 5
 --- !u!1 &1068545535
 GameObject:
   m_ObjectHideFlags: 0
@@ -2212,18 +2227,13 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491241228}
   m_CullTransparentMesh: 1
---- !u!1 &1787388602 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5313342018550475665, guid: a496b2372cdf9a94ab01513171759119, type: 3}
-  m_PrefabInstance: {fileID: 8951262485619276593}
-  m_PrefabAsset: {fileID: 0}
 --- !u!82 &1787388610
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1787388602}
+  m_GameObject: {fileID: 3856644392152879264}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -2744,6 +2754,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1889373684}
   m_CullTransparentMesh: 1
+--- !u!1 &3856644392152879264 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5313342018550475665, guid: a496b2372cdf9a94ab01513171759119, type: 3}
+  m_PrefabInstance: {fileID: 8951262485619276593}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8951262485619276593
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -131,6 +131,8 @@ public class DistanceCounter : MonoBehaviour
     {
         distance += kilometers;
     }
+ 
+
 
 
 }
