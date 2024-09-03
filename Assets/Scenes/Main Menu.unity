@@ -752,7 +752,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 797757544}
         m_TargetAssemblyTypeName: Menu_Buttons, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_MethodName: LoadStoreScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1399,7 +1399,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 797757544}
         m_TargetAssemblyTypeName: Menu_Buttons, Assembly-CSharp
-        m_MethodName: LoadOptions
+        m_MethodName: LoadOptionsScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

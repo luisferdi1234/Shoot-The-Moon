@@ -17,11 +17,16 @@ public class DistanceCounter : MonoBehaviour
             Instance = this;
         }
     }
-    //Distance Variables
 
-    
+    //Distance Variables
     private float timer;
     private float distance = 0;
+
+    [Tooltip("How far the rocket needs to go before it wins!")]
+    [SerializeField]
+    private float maxDistance = 100f;
+    [SerializeField]
+    private GameObject WinScreenCanvas;
     [SerializeField] 
     private TextMeshProUGUI distanceText;
 
@@ -37,7 +42,8 @@ public class DistanceCounter : MonoBehaviour
     public float FuelAmount { get => fuelAmount; set => fuelAmount = value; }
 
     void Update()
-    { 
+    {
+        CheckDistance();
         //get time from the start of the fly phase
         timer += Time.deltaTime;
 
@@ -56,6 +62,22 @@ public class DistanceCounter : MonoBehaviour
     }
 
     /// <summary>
+    /// Checks how far the player has traveled and pops up the win screen
+    /// </summary>
+    void CheckDistance()
+    {
+        if (distance >= maxDistance)
+        {
+            //Saves current gold in case player wants to keep playing
+            ScoreManager.Instance.SaveGold();
+
+            //Shows Win Screen
+            WinScreenCanvas.SetActive(true);
+            gameObject.SetActive(false);
+        }
+    }
+
+    /// <summary>
     /// Lowers Fuel Bar on UI
     /// </summary>
     public void DecreaseFuel(float amount)
@@ -69,7 +91,7 @@ public class DistanceCounter : MonoBehaviour
     /// Increases Fuel Bar by a given amount
     /// </summary>
     /// <param name="pickupAmount"></param>
-    void IncreaseFuel(float pickupAmount)
+    public void IncreaseFuel(float pickupAmount)
     {
         fuelAmount += pickupAmount;
         fuelAmount = Mathf.Clamp(fuelAmount, 0, maxFuelAmount);

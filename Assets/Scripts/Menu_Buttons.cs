@@ -11,7 +11,7 @@ public class Menu_Buttons : MonoBehaviour
     /// <summary>
     /// Method to use to load Scene0
     /// </summary>
-    public void LoadScene()
+    public void LoadStoreScene()
     {
         GetComponent<AudioSource>().PlayOneShot(buttonPress);
 
@@ -21,7 +21,7 @@ public class Menu_Buttons : MonoBehaviour
     /// <summary>
     /// Handles the Options Button Being Pressed
     /// </summary>
-    public void LoadOptions()
+    public void LoadOptionsScene()
     {
         GetComponent<AudioSource>().PlayOneShot(buttonPress);
 
@@ -31,7 +31,7 @@ public class Menu_Buttons : MonoBehaviour
     /// <summary>
     /// Handles the Credits Button Being Pressed
     /// </summary>
-    public void LoadCredits()
+    public void LoadCreditsScene()
     {
         GetComponent<AudioSource>().PlayOneShot(buttonPress);
 
@@ -44,6 +44,16 @@ public class Menu_Buttons : MonoBehaviour
     public void ExitButton()
     {
         Application.Quit();
+    }
+
+    /// <summary>
+    /// Goes to Main Menu Scene
+    /// </summary>
+    public void LoadMenuScene()
+    {
+        GetComponent<AudioSource>().PlayOneShot(buttonPress);
+
+        StartCoroutine(LoadSceneAfterSound("Main Menu"));
     }
 
     IEnumerator LoadSceneAfterSound(string sceneName)
