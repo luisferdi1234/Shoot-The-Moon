@@ -127,5 +127,16 @@ public class Rocket : MonoBehaviour
             DistanceCounter.Instance.DecreaseFuel(fuelLoss);
             Destroy(collision.gameObject);
         }
+        else if (collision.gameObject.name.Contains("FuelPickUp"))
+        {
+            float fuelGained = collision.gameObject.GetComponent<FuelPickUp>().fuelGained;
+            DistanceCounter.Instance.IncreaseFuel(DistanceCounter.Instance.MaxFuelAmount * fuelGained);
+            Destroy(collision.gameObject);
+        }
+        else if (collision.gameObject.name.Contains("GoldPickUp"))
+        {
+            ScoreManager.Instance.AddGold(10);
+            Destroy(collision.gameObject);
+        }
     }
 }
