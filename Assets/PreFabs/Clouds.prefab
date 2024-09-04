@@ -103,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   health: 1
-  goldFromDeath: 1
+  goldFromDeath: 2
 --- !u!61 &3613660550791295205
 BoxCollider2D:
   m_ObjectHideFlags: 0

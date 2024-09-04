@@ -7,26 +7,26 @@ public class Enemy : MonoBehaviour
 {
     //Variables
     [SerializeField]
-    private float speed = 5.0f;
+    protected float speed = 5.0f;
 
     [SerializeField]
-    private int health = 2;
+    protected int health = 2;
 
     [SerializeField]
-    private int goldFromDeath = 1;
+    protected int goldFromDeath = 1;
 
-    private Rigidbody2D rb;
+    protected Rigidbody2D rb;
 
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         //Makes enemy move downwards
-        rb = this.GetComponent<Rigidbody2D>();
+        rb = gameObject.GetComponent<Rigidbody2D>();
         rb.velocity = Vector2.down * speed;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
         //Checks collision with bullets
         if (collision.gameObject.tag == "Bullet")
