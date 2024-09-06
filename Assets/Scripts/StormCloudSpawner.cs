@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class StormCloudSpawner : EnemySpawn
+
 {
     // Start is called before the first frame update
     protected override void Start()
@@ -17,5 +18,9 @@ public class StormCloudSpawner : EnemySpawn
     {
         GameObject a = Instantiate(enemyPrefab);
         a.transform.position = new Vector2(-screenBounds.x - 2, Random.Range(-screenBounds.y + 4, screenBounds.y));
+        
+        GameObject b = Instantiate(enemyPrefab);
+        b.transform.position = new Vector2(-screenBounds.x - 2, Random.Range(-screenBounds.y + 2, screenBounds.y));
+
     }
 }
