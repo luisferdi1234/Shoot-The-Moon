@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class StormCloudSpawner : EnemySpawn
-
 {
     // Start is called before the first frame update
     protected override void Start()
@@ -12,15 +11,22 @@ public class StormCloudSpawner : EnemySpawn
 
         //Start Coroutine
         StartCoroutine(EnemyWave(SpawnCloud));
-
     }
+
+    /// <summary>
+    /// Instantiates two cloud objects
+    /// </summary>
     private void SpawnCloud()
     {
+        //Generates random spawn location
+        Vector2 spawnPosition = new Vector2(-screenBounds.x - 2, Random.Range(-screenBounds.y + 4, screenBounds.y));
+
+        //Spawns two clouds
         GameObject a = Instantiate(enemyPrefab);
-        a.transform.position = new Vector2(-screenBounds.x - 2, Random.Range(-screenBounds.y + 4, screenBounds.y));
+        a.transform.position = spawnPosition;
         
         GameObject b = Instantiate(enemyPrefab);
-        b.transform.position = new Vector2(-screenBounds.x - 2, Random.Range(-screenBounds.y + 2, screenBounds.y));
+        b.transform.position = spawnPosition;
 
     }
 }
