@@ -879,7 +879,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameUI: {fileID: 1013370293}
   LaunchUI: {fileID: 453828276}
-  Rocket: {fileID: 0}
+  Rocket: {fileID: 361166517}
 --- !u!4 &634317174
 Transform:
   m_ObjectHideFlags: 0
