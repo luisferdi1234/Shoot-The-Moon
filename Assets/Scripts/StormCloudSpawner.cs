@@ -26,6 +26,7 @@ public class StormCloudSpawner : EnemySpawn
         a.transform.position = spawnPosition;
 
         spawnPosition.x = spawnPosition.x - 1;
+        spawnPosition.y = spawnPosition.y + 1;
         
         GameObject b = Instantiate(enemyPrefab);
         b.transform.position = spawnPosition;
