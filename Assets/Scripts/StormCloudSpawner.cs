@@ -24,6 +24,8 @@ public class StormCloudSpawner : EnemySpawn
         //Spawns two clouds
         GameObject a = Instantiate(enemyPrefab);
         a.transform.position = spawnPosition;
+
+        spawnPosition.x = spawnPosition.x - 1;
         
         GameObject b = Instantiate(enemyPrefab);
         b.transform.position = spawnPosition;
