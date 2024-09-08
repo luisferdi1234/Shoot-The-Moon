@@ -50,7 +50,7 @@ public class HotAirBalloon : Enemy
     /// </summary>
     void SpawnPickUp()
     {
-        int selection = Random.Range(0, 1);
+        int selection = Random.Range(0, 2);
         if (selection == 0)
         {
             Instantiate(goldPickUp, transform.position, transform.rotation);
