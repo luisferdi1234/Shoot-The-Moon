@@ -23,6 +23,7 @@ public class Rocket : MonoBehaviour
     private AudioSource gameSoundEffects;
     [SerializeField]
     private AudioClip bulletSound;
+    public AudioClip playerHealthUp;
 
     //Input System Variables
     private PlayerControls playerControls;
@@ -131,11 +132,13 @@ public class Rocket : MonoBehaviour
         {
             float fuelGained = collision.gameObject.GetComponent<FuelPickUp>().fuelGained;
             DistanceCounter.Instance.IncreaseFuel(DistanceCounter.Instance.MaxFuelAmount * fuelGained);
+            gameSoundEffects.PlayOneShot(playerHealthUp);
             Destroy(collision.gameObject);
         }
         else if (collision.gameObject.name.Contains("GoldPickUp"))
         {
             ScoreManager.Instance.AddGold(10);
+            gameSoundEffects.PlayOneShot(playerHealthUp);
             Destroy(collision.gameObject);
         }
     }
