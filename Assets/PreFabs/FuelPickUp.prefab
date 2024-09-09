@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 689557338161244801}
   - component: {fileID: 1668951223301962402}
   - component: {fileID: 841649399886862653}
+  - component: {fileID: -3418410614416218479}
   m_Layer: 8
   m_Name: FuelPickUp
   m_TagString: PickUp
@@ -76,8 +77,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -585994335
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.050980397, g: 1, b: 0, a: 1}
@@ -179,3 +180,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   fuelGained: 0.1
+--- !u!210 &-3418410614416218479
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485636355427781008}
+  m_Enabled: 1
+  m_SortingLayerID: -585994335
+  m_SortingLayer: 4
+  m_SortingOrder: 0
+  m_SortAtRoot: 0

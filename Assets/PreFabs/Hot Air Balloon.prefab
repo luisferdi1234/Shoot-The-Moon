@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8223710290886592013}
   - component: {fileID: 3356562275757363769}
   - component: {fileID: 5857121712253303904}
+  - component: {fileID: 2912769204612511184}
   m_Layer: 6
   m_Name: Hot Air Balloon
   m_TagString: Enemy
@@ -76,8 +77,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -585994335
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.8867924, g: 0.54065555, b: 0, a: 1}
@@ -182,3 +183,15 @@ MonoBehaviour:
   goldFromDeath: 1
   goldPickUp: {fileID: 3029743546717162432, guid: d6633d2e017de2c45a7037067c565e82, type: 3}
   fuelPickUp: {fileID: 485636355427781008, guid: 99dc0eddcd626cd4e888d82abe91adf0, type: 3}
+--- !u!210 &2912769204612511184
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8390439238597758472}
+  m_Enabled: 1
+  m_SortingLayerID: -585994335
+  m_SortingLayer: 4
+  m_SortingOrder: 0
+  m_SortAtRoot: 0

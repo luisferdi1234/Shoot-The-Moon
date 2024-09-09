@@ -111,6 +111,7 @@ public class LaunchScript : MonoBehaviour
     private void CheckPowerBar()
     {
         gameUI.SetActive(true);
+
         distanceCounter = DistanceCounter.Instance;
 
         //If bad launch, set fuel to minimum

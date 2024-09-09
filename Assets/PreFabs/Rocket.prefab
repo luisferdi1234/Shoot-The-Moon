@@ -78,8 +78,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -585994335
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 305026315878358026, guid: c8eca07c5f389e743814d15acfe0e02c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -145,6 +145,7 @@ MonoBehaviour:
   bullet: {fileID: 3680231748080708415, guid: b347adf4e4280a943a63b52e6bb98292, type: 3}
   gameSoundEffects: {fileID: 1139748899883502697}
   bulletSound: {fileID: 8300000, guid: 6dae0e9865361a349b26fc69cf794e6d, type: 3}
+  playerHealthUp: {fileID: 0}
 --- !u!114 &8008800565883988919
 MonoBehaviour:
   m_ObjectHideFlags: 0
