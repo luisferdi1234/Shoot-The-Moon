@@ -53,6 +53,12 @@ TagManager:
   - name: Background 3
     uniqueID: 2321875453
     locked: 0
-  - name: Gameplay
+  - name: Rocket
     uniqueID: 3708972961
+    locked: 0
+  - name: Front Cloud
+    uniqueID: 2874858111
+    locked: 0
+  - name: Gameplay
+    uniqueID: 1896595279
     locked: 0
