@@ -3137,12 +3137,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1796279506}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1797216564}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1796279510
 MonoBehaviour:
@@ -3188,6 +3188,7 @@ GameObject:
   - component: {fileID: 1797216561}
   - component: {fileID: 1797216560}
   - component: {fileID: 1797216559}
+  - component: {fileID: 1797216565}
   m_Layer: 5
   m_Name: WinScreenCanvas
   m_TagString: Untagged
@@ -3383,6 +3384,7 @@ RectTransform:
   - {fileID: 1372961327}
   - {fileID: 1439852940}
   - {fileID: 762035637}
+  - {fileID: 1796279509}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3390,6 +3392,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1797216565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797216558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2335e3e4f98d65847b1bdff97f318891, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1889373684
 GameObject:
   m_ObjectHideFlags: 0
@@ -3535,6 +3549,5 @@ SceneRoots:
   - {fileID: 1797216564}
   - {fileID: 453828282}
   - {fileID: 246523864}
-  - {fileID: 1796279509}
   - {fileID: 634317174}
   - {fileID: 361166516}
