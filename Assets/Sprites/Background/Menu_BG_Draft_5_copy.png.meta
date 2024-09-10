@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: eee44217a1c21b8459e0f1bcb8533c68
+guid: 906e877be0c6b2c4dbe8a20ee01a47e4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8320652130659045313
-    second: Cloud_2_copy_0
+      213: 5506505948423747278
+    second: Menu_BG_Draft_5_copy_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cloud_2_copy_0
+      name: Menu_BG_Draft_5_copy_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 665
-        height: 171
+        width: 700
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f30787cc8fa178c80800000000000000
-      internalID: -8320652130659045313
+      spriteID: ec67f514cf90b6c40800000000000000
+      internalID: 5506505948423747278
       vertices: []
       indices: 
       edges: []
@@ -143,8 +130,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Cloud_2_copy_0: -8320652130659045313
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
