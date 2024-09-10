@@ -10,6 +10,7 @@ public class ScoreManager : MonoBehaviour
 {
     //Singleton pattern to make scoremanager accessible from anywhere
     public static ScoreManager Instance {  get; private set; }
+
     private void Awake()
     {
         if (Instance == null)
@@ -22,11 +23,16 @@ public class ScoreManager : MonoBehaviour
     private float goldTimer = 0;
     private bool timeIsRunning = true;
     private int gold = 0;
+    private int enemiesDefeated = 0;
 
     [SerializeField]
     private TextMeshProUGUI goldText;
     [SerializeField]
     private int goldPerSecond = 1;
+
+    //Accessors
+    public int EnemiesDefeated { get => enemiesDefeated;}
+    public int Gold { get => gold;}
 
     // Start is called before the first frame update
     void Start()
@@ -78,5 +84,13 @@ public class ScoreManager : MonoBehaviour
     void DisplayScore ()
     {
         goldText.text = $"Gold: ${gold}";
+    }
+
+    /// <summary>
+    /// Increases the count for the amount of enemies defeated
+    /// </summary>
+    public void IncreaseEnemyCount()
+    {
+        enemiesDefeated++;
     }
 }

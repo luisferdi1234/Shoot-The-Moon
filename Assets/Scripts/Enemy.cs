@@ -39,6 +39,7 @@ public class Enemy : MonoBehaviour
             {
                 //Awards coins on enemy death
                 ScoreManager.Instance.AddGold(goldFromDeath);
+                ScoreManager.Instance.IncreaseEnemyCount();
                 Destroy(gameObject);
             }
         }

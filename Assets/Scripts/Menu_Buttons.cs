@@ -56,9 +56,22 @@ public class Menu_Buttons : MonoBehaviour
         StartCoroutine(LoadSceneAfterSound("Main Menu"));
     }
 
+    /// <summary>
+    /// Waits for the button sound to finish playing before swapping to next scene
+    /// </summary>
+    /// <param name="sceneName"></param>
+    /// <returns></returns>
     IEnumerator LoadSceneAfterSound(string sceneName)
     {
+        //Sets time back to normal
+        if (Time.timeScale == 0)
+        {
+            Time.timeScale = 1f;
+        }
+
         yield return new WaitForSeconds(buttonPress.length); // Wait for the sound to finish
+
+        //Loads next scene
         SceneManager.LoadScene(sceneName);
     }
 }
