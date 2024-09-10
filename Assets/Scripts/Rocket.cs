@@ -127,6 +127,10 @@ public class Rocket : MonoBehaviour
             float fuelLoss = DistanceCounter.Instance.MaxFuelAmount * fuelLossFromHit;
             DistanceCounter.Instance.DecreaseFuel(fuelLoss);
             Destroy(collision.gameObject);
+            if (DistanceCounter.Instance.FuelAmount <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
         else if (collision.gameObject.name.Contains("FuelPickUp"))
         {

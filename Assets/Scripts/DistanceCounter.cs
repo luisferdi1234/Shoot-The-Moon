@@ -21,12 +21,15 @@ public class DistanceCounter : MonoBehaviour
     //Distance Variables
     private float timer;
     private float distance = 0;
+    private bool gameRunning = true;
 
     [Tooltip("How far the rocket needs to go before it wins!")]
     [SerializeField]
     private float maxDistance = 100f;
     [SerializeField]
     private GameObject WinScreenCanvas;
+    [SerializeField]
+    private TextMeshProUGUI winScreenText;
     [SerializeField] 
     private TextMeshProUGUI distanceText;
 
@@ -40,6 +43,7 @@ public class DistanceCounter : MonoBehaviour
 
     public float MaxFuelAmount { get => maxFuelAmount; set => maxFuelAmount = value; }
     public float FuelAmount { get => fuelAmount; set => fuelAmount = value; }
+    public bool GameRunning { get => gameRunning;}
 
     void Update()
     {
@@ -48,7 +52,7 @@ public class DistanceCounter : MonoBehaviour
         timer += Time.deltaTime;
 
         //Updates kilometers every .1 seconds
-        if (timer >= .1f)
+        if (timer >= .1f && gameRunning)
         {
             timer = 0;
             AddDistance(.1f);
@@ -71,8 +75,11 @@ public class DistanceCounter : MonoBehaviour
             //Saves current gold in case player wants to keep playing
             ScoreManager.Instance.SaveGold();
 
+            //Makes fuel counter stop ticking
+            gameRunning = false;
             //Shows Win Screen
             WinScreenCanvas.SetActive(true);
+            SetWinScreenText();
             gameObject.SetActive(false);
         }
     }
@@ -107,7 +114,13 @@ public class DistanceCounter : MonoBehaviour
         if (fuelAmount <= 0)
         {
             ScoreManager.Instance.SaveGold();
-            SceneManager.LoadScene("OutOfFuel");
+
+            //Makes fuel counter stop ticking
+            gameRunning = false;
+
+            //Shows Loss Screen
+            WinScreenCanvas.SetActive(true);
+            SetLossScreenText();
         }
     }
 
@@ -132,7 +145,19 @@ public class DistanceCounter : MonoBehaviour
         distance += kilometers;
     }
  
+    /// <summary>
+    /// Sets the text on the win screen canvas
+    /// </summary>
+    void SetWinScreenText()
+    {
+        winScreenText.text = $"You Won!\nDistance: {distance} Km\n Enemies Defeated: {ScoreManager.Instance.EnemiesDefeated} \nCoins Earned: {ScoreManager.Instance.Gold}";
+    }
 
-
-
+    /// <summary>
+    /// Sets the text on the loss screen canvas
+    /// </summary>
+    void SetLossScreenText()
+    {
+        winScreenText.text = $"You Lost.\nDistance: {distance} Km\n Enemies Defeated: {ScoreManager.Instance.EnemiesDefeated} \nCoins Earned: {ScoreManager.Instance.Gold}";
+    }
 }
