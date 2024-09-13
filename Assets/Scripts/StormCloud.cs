@@ -6,6 +6,8 @@ using UnityEngine.UIElements;
 
 public class StormCloud : Enemy
 {
+
+   //Variables//
     public float distance = 15.0f;
     private bool movingRight = true;
     private Vector3 startPosition;
@@ -16,7 +18,7 @@ public class StormCloud : Enemy
     }
 
     void Update()
-    {
+    { //change direction and flip enemy//
         if (movingRight)
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
@@ -32,7 +34,7 @@ public class StormCloud : Enemy
             Flip();
         }
     }
-
+    //flip stormCloud enemy//
     void Flip()
     {
         Vector3 theScale = transform.localScale;
