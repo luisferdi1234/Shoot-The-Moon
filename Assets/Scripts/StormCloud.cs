@@ -8,14 +8,11 @@ public class StormCloud : Enemy
 {
 
    //Variables//
-    public float distance = 15.0f;
+    public float distance = 10.0f;
     private bool movingRight = true;
     private Vector3 startPosition;
 
-    void Start()
-    {
-        startPosition = transform.position;
-    }
+
 
     void Update()
     { //change direction and flip enemy//

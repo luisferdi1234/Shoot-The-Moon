@@ -104,7 +104,7 @@ MonoBehaviour:
   speed: 3
   health: 1
   goldFromDeath: 2
-  distance: 10
+  distance: 5
 --- !u!50 &-4858379601425011450
 Rigidbody2D:
   serializedVersion: 4
