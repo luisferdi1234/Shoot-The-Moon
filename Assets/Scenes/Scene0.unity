@@ -580,6 +580,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocket
       objectReference: {fileID: 0}
+    - target: {fileID: 6824550291463518746, guid: 937ae91dee860f6408b1515abd51ffea, type: 3}
+      propertyPath: playerHealthUp
+      value: 
+      objectReference: {fileID: 8300000, guid: cf5353eec77bc804985abbfd840b7362, type: 3}
     - target: {fileID: 7794387127953886432, guid: 937ae91dee860f6408b1515abd51ffea, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
