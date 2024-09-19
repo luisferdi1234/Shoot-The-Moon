@@ -1,0 +1,289 @@
+fileFormatVersion: 2
+guid: e7225c26cdf2cbf4887f269a2cea6da6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1774473751024684753
+    second: Gold_coin_and_Fuel_item 1_0
+  - first:
+      213: -6923084996354956325
+    second: Gold_coin_and_Fuel_item 1_1
+  - first:
+      213: -8427911475597097572
+    second: Gold_coin_and_Fuel_item 1_2
+  - first:
+      213: -1917207904134556749
+    second: Gold_coin_and_Fuel_item 1_3
+  - first:
+      213: -3853299417314077014
+    second: Gold_coin_and_Fuel_item 1_4
+  - first:
+      213: 5411926726613282915
+    second: Gold_coin_and_Fuel_item 1_5
+  - first:
+      213: -2725708923328705580
+    second: Gold_coin_and_Fuel_item 1_6
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Gold_coin_and_Fuel_item 1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 90
+        width: 264
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e6dde7d07c643e4c83e5b4dd1667a98
+      internalID: -42274362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gold_coin_and_Fuel_item 1_1
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 88
+        width: 393
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 958659abdb5283344b98a7fd573f8f3a
+      internalID: 1550576009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gold_coin_and_Fuel_item 1_2
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 84
+        width: 259
+        height: 396
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b85e00e4fb9fb3a409938647c3c03c90
+      internalID: 1695317340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gold_coin_and_Fuel_item 1_3
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 73
+        width: 48
+        height: 389
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f399495ca3c7214ebaf7782597b7645
+      internalID: -691933941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gold_coin_and_Fuel_item 1_4
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 80
+        width: 260
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06624e2b5a5645d4f9fcc9edcbf466fb
+      internalID: -1462860358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gold_coin_and_Fuel_item 1_5
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 76
+        width: 394
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d427bc863bf8c314bb105ae1b935592e
+      internalID: -426186610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gold_coin_and_Fuel_item 1_6
+      rect:
+        serializedVersion: 2
+        x: 1915
+        y: 80
+        width: 258
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3b5ce2ab4104454eb6d7fb435af3564
+      internalID: -290432360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 4e2982948330d3644bd31c675ea94b2c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Gold_coin_and_Fuel_item 1_0: -42274362
+      Gold_coin_and_Fuel_item 1_1: 1550576009
+      Gold_coin_and_Fuel_item 1_2: 1695317340
+      Gold_coin_and_Fuel_item 1_3: -691933941
+      Gold_coin_and_Fuel_item 1_4: -1462860358
+      Gold_coin_and_Fuel_item 1_5: -426186610
+      Gold_coin_and_Fuel_item 1_6: -290432360
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
