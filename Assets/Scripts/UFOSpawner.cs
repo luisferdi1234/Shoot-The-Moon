@@ -18,16 +18,7 @@ public class UFOSpawner : EnemySpawn
     private void SpawnUFO()
     {
         GameObject a = Instantiate(enemyPrefab);
-
-        int spawnSide = Random.Range(0, 1);
-
-        if (spawnSide == 0)
-        {
-            a.transform.position = new Vector2(-screenBounds.x, Random.Range(0, screenBounds.y + 4));
-        }
-        else
-        {
-            a.transform.position = new Vector2(screenBounds.x, Random.Range(0, screenBounds.y + 4));
-        }
+        a.transform.position = new Vector2( UnityEngine.Random.Range(-screenBounds.x, screenBounds.x), screenBounds.y);
+         
     }
 }

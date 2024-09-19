@@ -4,16 +4,24 @@ using UnityEngine;
 
 public class UFOMovement : Enemy
 {
-
-    public float radius = 2f;
-    private float angle = 0f;
+    public Transform[] waypoints;
+    private int currentWaypointIndex = 0;
 
     void Update()
     {
-        angle += speed * Time.deltaTime; // Increment the angle based on time and speed
-        float x = Mathf.Cos(angle) * radius; // Calculate the x position
-        float y = Mathf.Sin(angle) * radius; // Calculate the y position
-        transform.position = new Vector3(x, y, 0); // Update the UFO position
+        MoveAlongPath();
     }
+    void MoveAlongPath()
+    {
+        if (waypoints.Length == 0) return;
 
+        Transform targetWaypoint = waypoints[currentWaypointIndex];
+        Vector3 direction = targetWaypoint.position - transform.position;
+        transform.position += direction.normalized * speed * Time.deltaTime;
+
+        if (Vector3.Distance(transform.position, targetWaypoint.position) < 0.1f)
+        {
+            currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
+        }
+    }
 }

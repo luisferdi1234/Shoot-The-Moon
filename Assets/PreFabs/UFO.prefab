@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 15494251881492768}
   - component: {fileID: 3294129174362421163}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.7686275, g: 0.7686275, b: 0.7686275, a: 1}
+  m_Color: {r: 0.3529412, g: 0.8117648, b: 0.050980397, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 496595045700043259}
   - component: {fileID: -4051961285111553500}
   - component: {fileID: -9001555280782435906}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: UFO
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -166,7 +166,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.7686275, g: 0.7686275, b: 0.7686275, a: 1}
+  m_Color: {r: 0.35165894, g: 0.8113208, b: 0.057404764, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -188,10 +188,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e07fc80cade5f5408cbec0f18b135d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  health: 1
-  goldFromDeath: 1
-  radius: 1
+  speed: 5
+  health: 5
+  goldFromDeath: 10
+  waypoints:
+  - {fileID: 4886977007473881319, guid: ba908898a15141d4d9d510f6f798f4ea, type: 3}
+  - {fileID: 1763681670459685450, guid: 7833777916be22a42ab007eaf1d389b3, type: 3}
+  - {fileID: 5912836385848478014, guid: ed613bdae6b7ce444a13d27a946c5dfd, type: 3}
+  - {fileID: 7577982186267930711, guid: 5163d38e407f3e14fa9e943c55eee861, type: 3}
+  - {fileID: 7740824993867400179, guid: 38b8d55624e8ee74096c5a0c0934b030, type: 3}
+  - {fileID: 6635707414956214991, guid: ab5e109e52276724db8101f7c76347c0, type: 3}
+  - {fileID: 3239680662308656937, guid: a9e8a598461457d4fa784e1445d2b70e, type: 3}
+  - {fileID: 981967587030234786, guid: c4488a73a15f97047a1c5bc31bc3be44, type: 3}
+  - {fileID: 8200436626321426978, guid: b1a91268d77bfa74b8075e2a9064e8f1, type: 3}
+  - {fileID: 8945467253682560311, guid: db2ace4437cfee74084d17a0e3af31e5, type: 3}
+  - {fileID: 8197970469209211478, guid: 02ea13cbb7214e3468d32557bcaa127e, type: 3}
+  - {fileID: 6634284966140704517, guid: 1ce1f4dc0fc4d3a4da59062b2dbe7cc7, type: 3}
+  - {fileID: 8991791136612810913, guid: dc7f0dfb921a51149bb3e128ff0ce912, type: 3}
+  - {fileID: 4858954248600903255, guid: 996e32a3d25c98d469e67708e3cdc401, type: 3}
+  - {fileID: 8480067774199671893, guid: 9893d2c1dedfff243996dcb5714c53cc, type: 3}
+  - {fileID: 6538356228331290774, guid: 8da4807b4137574449b1a575178e3356, type: 3}
+  - {fileID: 1269466777176383094, guid: 23c3f42a243d52b439f1abd5db7b42b5, type: 3}
+  - {fileID: 378720663419741234, guid: a31861bc203dfcb468541a80f83e29f2, type: 3}
+  - {fileID: 1839502524095402981, guid: e3c954c0501f1de46a138825b2c1e9d0, type: 3}
+  - {fileID: 9166173494441932430, guid: 12e285876a3d3be4599930952c9f0bea, type: 3}
+  - {fileID: 3079072234794508279, guid: b20bd24adedfa934da5872e21d360b99, type: 3}
+  - {fileID: 8720762129509127020, guid: 453853da40d2d484696feef9e4bacebd, type: 3}
+  - {fileID: 9118148090530553272, guid: 44a1143614a30fd46b9b2f99269c5f7a, type: 3}
+  - {fileID: 1558392296923042479, guid: bf21770f83fb6e843947faae11c7e8a5, type: 3}
+  - {fileID: 8949245096753085724, guid: 51e92f07f8d94e249b8bf842e4ec00a1, type: 3}
+  - {fileID: 629603427087497138, guid: 5aa8cd61492e04240875a08fb99a6bc0, type: 3}
+  - {fileID: 7158411853151538667, guid: 653e77b8a27bada4aa53cc2b91c5b24e, type: 3}
+  - {fileID: 4227237213229586013, guid: d4256bcd7ef1d924dbc4b94195b74c03, type: 3}
+  - {fileID: 4569814932984802223, guid: 1665819c2a4041a4b80ec95386b8ed92, type: 3}
+  - {fileID: 7744594165411318049, guid: 6abcf564756f7f545a2fb96013ce483b, type: 3}
 --- !u!50 &-4051961285111553500
 Rigidbody2D:
   serializedVersion: 4
@@ -200,14 +230,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9091285945943995383}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_AngularDrag: 0
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
