@@ -1650,7 +1650,6 @@ GameObject:
   - component: {fileID: 1013370301}
   - component: {fileID: 1013370302}
   - component: {fileID: 1013370303}
-  - component: {fileID: 1013370304}
   m_Layer: 5
   m_Name: GameUI
   m_TagString: Untagged
@@ -1921,20 +1920,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1013370304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1013370293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 631a658224dcc6b43b313886c6095072, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 9091285945943995383, guid: f7cb4ed53d90ee340a15e6e32cb38e04, type: 3}
-  respawnTime: 5
 --- !u!1 &1068545535
 GameObject:
   m_ObjectHideFlags: 0
