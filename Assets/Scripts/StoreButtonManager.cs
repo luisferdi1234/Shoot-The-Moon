@@ -11,8 +11,15 @@ public class StoreButtonManager : MonoBehaviour
     /// </summary>
     public void LaunchButton()
     {
-        //loads the play scene using the function
-        SceneManager.LoadScene("Scene0");
+        int currentLevel = PlayerPrefs.GetInt("Level");
+        if(currentLevel <=1)
+        {
+            SceneManager.LoadScene("Scene0");
+        }
+        else{
+            SceneManager.LoadScene("Level2");
+        }
+        
     }
 
     public void UpgradeButton(string upgradeName)

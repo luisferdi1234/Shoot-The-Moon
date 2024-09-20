@@ -23,6 +23,7 @@ public class DistanceCounter : MonoBehaviour
     private float distance = 0;
     private bool gameRunning = true;
 
+
     [Tooltip("How far the rocket needs to go before it wins!")]
     [SerializeField]
     private float maxDistance = 100f;
@@ -32,6 +33,8 @@ public class DistanceCounter : MonoBehaviour
     private TextMeshProUGUI winScreenText;
     [SerializeField] 
     private TextMeshProUGUI distanceText;
+
+    private int level = 1;
 
     //Fuel Variables
     [SerializeField]
@@ -63,7 +66,32 @@ public class DistanceCounter : MonoBehaviour
 
         //Updates on screen text
         distanceText.text = $"{distance.ToString()} Km";
+
+        if (distance >= 50)
+        {
+            ScoreManager.Instance.SaveGold();
+
+            //Makes fuel counter stop ticking
+            gameRunning = false;
+
+            //Shows Loss Screen
+            WinScreenCanvas.SetActive(true);
+            SetWinScreenText();
+            
+            level += 1;
+
+            saveLevel();
+        }
+
     }
+
+    void saveLevel()
+    {
+        int totalLevel = PlayerPrefs.GetInt("Level");
+        totalLevel += level;
+        PlayerPrefs.SetInt("Level", totalLevel);
+    }
+
 
     /// <summary>
     /// Checks how far the player has traveled and pops up the win screen
@@ -160,4 +188,5 @@ public class DistanceCounter : MonoBehaviour
     {
         winScreenText.text = $"You Lost.\nDistance: {distance} Km\n Enemies Defeated: {ScoreManager.Instance.EnemiesDefeated} \nCoins Earned: {ScoreManager.Instance.Gold}";
     }
+
 }
