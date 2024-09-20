@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Gold_coin_and_Fuel_item_0: -497818709698371963
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
