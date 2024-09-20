@@ -66,21 +66,21 @@ public class DistanceCounter : MonoBehaviour
 
         //Updates on screen text
         distanceText.text = $"{distance.ToString()} Km";
-
-        if (distance >= 50)
+        
+        //setts win condition to 50km and 10 enemy kills
+        if (distance >= 50 & ScoreManager.Instance.EnemiesDefeated >= 10)
         {
-            ScoreManager.Instance.SaveGold();
-
             //Makes fuel counter stop ticking
             gameRunning = false;
 
-            //Shows Loss Screen
+            //Shows win Screen
             WinScreenCanvas.SetActive(true);
             SetWinScreenText();
             
             level += 1;
-
+            //save level progress
             saveLevel();
+            ScoreManager.Instance.SaveGold(); 
         }
 
     }
@@ -146,7 +146,7 @@ public class DistanceCounter : MonoBehaviour
             //Makes fuel counter stop ticking
             gameRunning = false;
 
-            //Shows Loss Screen
+            //Shows loss Screen
             WinScreenCanvas.SetActive(true);
             SetLossScreenText();
         }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ public class Enemy : MonoBehaviour
     //Variables
     [SerializeField]
     protected float speed = 5.0f;
+
 
     [SerializeField]
     protected int health = 2;
@@ -42,6 +44,7 @@ public class Enemy : MonoBehaviour
                 ScoreManager.Instance.IncreaseEnemyCount();
                 Destroy(gameObject);
             }
+            
         }
     }
 }

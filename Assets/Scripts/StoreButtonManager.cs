@@ -18,8 +18,7 @@ public class StoreButtonManager : MonoBehaviour
         }
         else{
             SceneManager.LoadScene("Level2");
-        }
-        
+        } 
     }
 
     public void UpgradeButton(string upgradeName)
