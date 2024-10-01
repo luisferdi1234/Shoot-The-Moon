@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ab823fe11e0224a4cb26d4117974322b
+guid: 40d0aa97156050140ba86cbb894cf294
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -497818709698371963
-    second: Gold_coin_and_Fuel_item_0
+      213: -7913244820603963032
+    second: Biplane_Sprite_Top_Down_View_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Gold_coin_and_Fuel_item_0
+      name: Biplane_Sprite_Top_Down_View_0
       rect:
         serializedVersion: 2
-        x: 5
+        x: 0
         y: 0
-        width: 634
-        height: 1108
+        width: 1693
+        height: 1893
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 58e92e565846719f0800000000000000
-      internalID: -497818709698371963
+      spriteID: 869733703c18e2290800000000000000
+      internalID: -7913244820603963032
       vertices: []
       indices: 
       edges: []
@@ -123,15 +123,14 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Gold_coin_and_Fuel_item_0: -497818709698371963
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
