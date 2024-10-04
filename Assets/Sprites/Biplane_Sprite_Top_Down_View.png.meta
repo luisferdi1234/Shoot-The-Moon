@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Biplane_Sprite_Top_Down_View_0: -7913244820603963032
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
