@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
     protected int health = 2;
 
     [SerializeField]
-    protected int goldFromDeath = 1;
+    protected int goldFromDeath = 2;
 
     protected Rigidbody2D rb;
 

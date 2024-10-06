@@ -1079,7 +1079,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.3018868, g: 0.2947668, b: 0.2947668, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1650,6 +1650,7 @@ GameObject:
   - component: {fileID: 1013370301}
   - component: {fileID: 1013370302}
   - component: {fileID: 1013370303}
+  - component: {fileID: 1013370305}
   m_Layer: 5
   m_Name: GameUI
   m_TagString: Untagged
@@ -1794,7 +1795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 7554973770875957084, guid: c26e3e14832ad5d4ea6f06c6631f10a3, type: 3}
-  respawnTime: 1
+  respawnTime: 6
 --- !u!114 &1013370301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1808,7 +1809,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1350063215531078893, guid: 613950902196f8f418cc85e19a1c9b35, type: 3}
-  respawnTime: 5
+  respawnTime: 4.4
 --- !u!114 &1013370302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1822,7 +1823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 8390439238597758472, guid: a962aca0485d5f843868fd9b742e9f38, type: 3}
-  respawnTime: 1
+  respawnTime: 3
 --- !u!82 &1013370303
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1920,6 +1921,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1013370305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013370293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 631a658224dcc6b43b313886c6095072, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 9091285945943995383, guid: f7cb4ed53d90ee340a15e6e32cb38e04, type: 3}
+  respawnTime: 10
 --- !u!1 &1068545535
 GameObject:
   m_ObjectHideFlags: 0

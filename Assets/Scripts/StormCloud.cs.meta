@@ -1,2 +1,13 @@
 fileFormatVersion: 2
 guid: 913dce0cc209a18448445588a33c5777
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - goldPickUp: {fileID: 3029743546717162432, guid: d6633d2e017de2c45a7037067c565e82, type: 3}
+  - fuelPickUp: {fileID: 485636355427781008, guid: 99dc0eddcd626cd4e888d82abe91adf0, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

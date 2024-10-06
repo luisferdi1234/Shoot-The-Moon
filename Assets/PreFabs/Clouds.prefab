@@ -102,10 +102,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 913dce0cc209a18448445588a33c5777, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 2
   health: 1
-  goldFromDeath: 2
-  distance: 6
+  goldFromDeath: 1
+  distance: 7
 --- !u!50 &-4858379601425011450
 Rigidbody2D:
   serializedVersion: 4
