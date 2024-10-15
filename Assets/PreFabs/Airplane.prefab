@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8749959172212523750}
   - component: {fileID: 9038872621370305028}
   m_Layer: 6
-  m_Name: Enemy
+  m_Name: Airplane
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
