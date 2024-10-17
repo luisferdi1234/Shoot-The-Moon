@@ -16,10 +16,9 @@ public class CheckOutOfBounds : MonoBehaviour
     void Update()
     {
         //Destroys object if it's outside of screen
-        if (transform.position.y < screenBounds.y - 20 || transform.position.y > screenBounds.y + 20 ||  transform.position.x < screenBounds.x - 20 || transform.position.x > screenBounds.x + 20)
+        if (transform.position.y < screenBounds.y - 20 || transform.position.y > screenBounds.y + 20 || transform.position.x < screenBounds.x - 20 || transform.position.x > screenBounds.x - 5)
         {
             Destroy(this.gameObject);
         }
-
     }
 }

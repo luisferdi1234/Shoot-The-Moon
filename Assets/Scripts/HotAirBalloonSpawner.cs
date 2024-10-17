@@ -25,11 +25,12 @@ public class HotAirBalloonSpawner : EnemySpawn
 
         if (spawnSide == 0)
         {
-            a.transform.position = new Vector2(-screenBounds.x, Random.Range(0, screenBounds.y + 4));
+            a.transform.position = new Vector2(-screenBounds.x+5, Random.Range(3,-3));
         }
         else
         {
-            a.transform.position = new Vector2(screenBounds.x, Random.Range(0, screenBounds.y + 4));
+            a.transform.position = new Vector2(screenBounds.x-5, Random.Range(3,-3));
         }
     }
+
 }

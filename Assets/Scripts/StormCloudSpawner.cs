@@ -19,7 +19,7 @@ public class StormCloudSpawner : EnemySpawn
     private void SpawnCloud()
     {
         //Generates random spawn location
-        Vector2 spawnPosition = new Vector2(-screenBounds.x + 0.5f , Random.Range(-screenBounds.y + 4, screenBounds.y + 1));
+        Vector2 spawnPosition = new Vector2(-screenBounds.x + 5f , Random.Range(-screenBounds.y , screenBounds.y + 1));
 
         //Spawns two clouds
         GameObject a = Instantiate(enemyPrefab);
