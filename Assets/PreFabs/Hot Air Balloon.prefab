@@ -145,7 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   health: 1
-  goldFromDeath: 1
+  goldFromDeath: 2
   goldPickUp: {fileID: 3029743546717162432, guid: d6633d2e017de2c45a7037067c565e82, type: 3}
   fuelPickUp: {fileID: 485636355427781008, guid: 99dc0eddcd626cd4e888d82abe91adf0, type: 3}
 --- !u!210 &2912769204612511184

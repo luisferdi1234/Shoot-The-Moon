@@ -192,7 +192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6
   health: 3
-  goldFromDeath: 5
+  goldFromDeath: 6
   waypoints:
   - {fileID: 4886977007473881319, guid: ba908898a15141d4d9d510f6f798f4ea, type: 3}
   - {fileID: 1763681670459685450, guid: 7833777916be22a42ab007eaf1d389b3, type: 3}

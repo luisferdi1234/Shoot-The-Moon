@@ -57,24 +57,24 @@ public class StoreButtonManager : MonoBehaviour
         if (!PlayerPrefs.HasKey(upgradeName))
         {
             //Cost is $20
-            return 20;
+            return 25;
         }
         else
         {
             if (PlayerPrefs.GetInt(upgradeName) == 0)
             {
                 //Cost is $50
-                return 50;
+                return 75;
             }
             else if (PlayerPrefs.GetInt(upgradeName) == 1)
             {
                 //Cost is $200
-                return 200;
+                return 225;
             }
             else if (PlayerPrefs.GetInt(upgradeName) == 2)
             {
                 //Cost is $500
-                return 500;
+                return 675;
             }
         }
         return 0;

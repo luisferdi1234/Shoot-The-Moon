@@ -45,21 +45,21 @@ public class ButtonHoverHandler : MonoBehaviour, IPointerEnterHandler, IPointerE
         //Refreshes Current Hovered Over Cost
         if (!PlayerPrefs.HasKey(upgradeName))
         {
-            costText.text = $"Cost: $20";
+            costText.text = $"Cost: $25";
         }
         else
         {
             if (PlayerPrefs.GetInt(upgradeName) == 0)
             {
-                costText.text = $"Cost: $50";
+                costText.text = $"Cost: $75";
             }
             else if (PlayerPrefs.GetInt(upgradeName) == 1)
             {
-                costText.text = $"Cost: $200";
+                costText.text = $"Cost: $225";
             }
             else if (PlayerPrefs.GetInt(upgradeName) == 2)
             {
-                costText.text = $"Cost: $500";
+                costText.text = $"Cost: $675";
             }
         }
 
@@ -75,21 +75,21 @@ public class ButtonHoverHandler : MonoBehaviour, IPointerEnterHandler, IPointerE
     {
         if (!PlayerPrefs.HasKey(upgradeName))
         {
-            costText.text = $"Cost: $20";
+            costText.text = $"Cost: $25";
         }
         else
         {
             if(PlayerPrefs.GetInt(upgradeName) == 0)
             {
-                costText.text = $"Cost: $50";
+                costText.text = $"Cost: $75";
             }
             else if (PlayerPrefs.GetInt(upgradeName) == 1)
             {
-                costText.text = $"Cost: $200";
+                costText.text = $"Cost: $225";
             }
             else if (PlayerPrefs.GetInt(upgradeName) == 2)
             {
-                costText.text = $"Cost: $500";
+                costText.text = $"Cost: $675";
             }
         }
     }

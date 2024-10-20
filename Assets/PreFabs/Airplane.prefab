@@ -106,7 +106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   health: 2
-  goldFromDeath: 2
+  goldFromDeath: 4
 --- !u!50 &295942077663005526
 Rigidbody2D:
   serializedVersion: 4
