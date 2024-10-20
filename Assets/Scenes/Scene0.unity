@@ -1700,7 +1700,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Get to 75km!
+  m_text: Get to 100km!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1765,7 +1765,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -89.06253, w: 0}
+  m_margin: {x: 0, y: 0, z: -95.203125, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2453,13 +2453,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c60929f2dd43ddc419bb93b07ef8517e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistance: 100
+  maxDistance: 101
   WinScreenCanvas: {fileID: 1797216558}
   winScreenText: {fileID: 1372961328}
   distanceText: {fileID: 1068545536}
   fuelBar: {fileID: 1369537059}
   maxFuelAmount: 10
-  distancevar: 8
+  distancevar: 100
   winscreen: {fileID: 573664324}
   quitbutton: {fileID: 1439852939}
 --- !u!114 &1013370300
@@ -2523,7 +2523,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
