@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class StormCloudSpawner : EnemySpawn
 {
+    public GameObject[] locations;
+
     // Start is called before the first frame update
     protected override void Start()
     {   //set screen size//
@@ -19,7 +22,7 @@ public class StormCloudSpawner : EnemySpawn
     private void SpawnCloud()
     {
         //Generates random spawn location
-        Vector2 spawnPosition = new Vector2(-screenBounds.x + 5f , Random.Range(-screenBounds.y , screenBounds.y + 1));
+        Vector2 spawnPosition = new Vector2(-screenBounds.x + 5f , Random.Range(-screenBounds.y+5f , screenBounds.y + 1));
 
         //Spawns two clouds
         GameObject a = Instantiate(enemyPrefab);

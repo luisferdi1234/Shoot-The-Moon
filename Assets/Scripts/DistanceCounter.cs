@@ -41,7 +41,7 @@ public class DistanceCounter : MonoBehaviour
     private Image fuelBar;
     [SerializeField]
     private float maxFuelAmount = 10f;
-
+    public float distancevar;
     private float fuelAmount = 10f;
 
     public float MaxFuelAmount { get => maxFuelAmount; set => maxFuelAmount = value; }
@@ -68,7 +68,7 @@ public class DistanceCounter : MonoBehaviour
         distanceText.text = $"{distance.ToString()} Km";
         
         //setts win condition to 50km and 10 enemy kills
-        if (distance >= 50 & ScoreManager.Instance.EnemiesDefeated >= 10)
+        if (distance >= distancevar)
         {
             //Makes fuel counter stop ticking
             gameRunning = false;
@@ -179,6 +179,7 @@ public class DistanceCounter : MonoBehaviour
     void SetWinScreenText()
     {
         winScreenText.text = $"You Won!\nDistance: {distance} Km\n Enemies Defeated: {ScoreManager.Instance.EnemiesDefeated} \nCoins Earned: {ScoreManager.Instance.Gold}";
+        
     }
 
     /// <summary>

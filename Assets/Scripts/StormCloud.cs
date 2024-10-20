@@ -12,7 +12,9 @@ public class StormCloud : Enemy
     private bool movingRight = true;
     private Vector3 startPosition;
 
+    public GameObject[] locations;
 
+    
 
     void Update()
     { //change direction and flip enemy//
