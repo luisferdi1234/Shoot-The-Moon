@@ -34,7 +34,7 @@ public class DistanceCounter : MonoBehaviour
     [SerializeField] 
     private TextMeshProUGUI distanceText;
 
-    private int level = 1;
+   // private int level = 1;
 
     //Fuel Variables
     [SerializeField]
@@ -43,6 +43,7 @@ public class DistanceCounter : MonoBehaviour
     private float maxFuelAmount = 10f;
     public float distancevar;
     private float fuelAmount = 10f;
+    public GameObject winscreen;
 
     public float MaxFuelAmount { get => maxFuelAmount; set => maxFuelAmount = value; }
     public float FuelAmount { get => fuelAmount; set => fuelAmount = value; }
@@ -77,9 +78,11 @@ public class DistanceCounter : MonoBehaviour
             WinScreenCanvas.SetActive(true);
             SetWinScreenText();
             
-            level += 1;
+            
             //save level progress
-            saveLevel();
+            //();
+            // winscreen.SetActive(true);
+            /////saveLevel();
             ScoreManager.Instance.SaveGold(); 
         }
 
@@ -88,7 +91,7 @@ public class DistanceCounter : MonoBehaviour
     void saveLevel()
     {
         int totalLevel = PlayerPrefs.GetInt("Level");
-        totalLevel += level;
+        ///////totalLevel += level;
         PlayerPrefs.SetInt("Level", totalLevel);
     }
 
@@ -146,8 +149,10 @@ public class DistanceCounter : MonoBehaviour
             //Makes fuel counter stop ticking
             gameRunning = false;
 
+            
             //Shows loss Screen
             WinScreenCanvas.SetActive(true);
+           
             SetLossScreenText();
         }
     }
@@ -178,7 +183,8 @@ public class DistanceCounter : MonoBehaviour
     /// </summary>
     void SetWinScreenText()
     {
-        winScreenText.text = $"You Won!\nDistance: {distance} Km\n Enemies Defeated: {ScoreManager.Instance.EnemiesDefeated} \nCoins Earned: {ScoreManager.Instance.Gold}";
+        winscreen.SetActive(true);
+        winScreenText.text = $"\nDistance: {distance} Km\n Enemies Defeated: {ScoreManager.Instance.EnemiesDefeated} \nCoins Earned: {ScoreManager.Instance.Gold}";
         
     }
 
