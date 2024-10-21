@@ -9,7 +9,7 @@ public class EnemySpawn : MonoBehaviour
     [SerializeField]
     protected GameObject enemyPrefab;
     [SerializeField]
-    protected float respawnTime = 1.0f;
+    protected float respawnTime;
     protected Vector2 screenBounds;
 
 

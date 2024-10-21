@@ -21,27 +21,8 @@ public class ParallaxImage : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = Vector2.down * moveSpeed;
 
-        ChangeXPosition();
+        
     }
 
-    void Update()
-    {
-        // Check if the cloud has moved off the bottom of the screen
-        if (transform.position.y < -screenBounds.y - 2)
-        {
-            // Reset the cloud's position to the top of the screen
-            transform.position = new Vector3(transform.position.x, screenBounds.y + 2, transform.position.z);
-            ChangeXPosition();
-        }
-    }
-
-    /// <summary>
-    /// Makes the cloud have a random x position when it spawns/spawns again
-    /// </summary>
-    void ChangeXPosition()
-    {
-        float x = Random.Range(-screenBounds.x, screenBounds.x);
-
-        transform.position = new Vector3(x, transform.position.y, transform.position.z);
-    }
+    
 }
