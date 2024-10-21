@@ -21,8 +21,12 @@ public class ParallaxImage : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = Vector2.down * moveSpeed;
 
-        
+        Invoke("destory", 10f);
     }
 
+    void destory()
+    {
+        Destroy(this);
+    }
     
 }
