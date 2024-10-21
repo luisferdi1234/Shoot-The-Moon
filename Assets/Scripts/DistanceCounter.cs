@@ -44,6 +44,7 @@ public class DistanceCounter : MonoBehaviour
     public float distancevar;
     private float fuelAmount = 10f;
     public GameObject winscreen;
+    public GameObject quitbutton;
 
     public float MaxFuelAmount { get => maxFuelAmount; set => maxFuelAmount = value; }
     public float FuelAmount { get => fuelAmount; set => fuelAmount = value; }
@@ -184,6 +185,8 @@ public class DistanceCounter : MonoBehaviour
     void SetWinScreenText()
     {
         winscreen.SetActive(true);
+        quitbutton.SetActive(false);
+       
         winScreenText.text = $"\nDistance: {distance} Km\n Enemies Defeated: {ScoreManager.Instance.EnemiesDefeated} \nCoins Earned: {ScoreManager.Instance.Gold}";
         
     }
